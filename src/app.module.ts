@@ -7,12 +7,12 @@ import { DomainEntity } from './models/domain.entity';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type:"sqlite",
-      database:"db",
-      entities:["dist/**/*.entity{.js,.ts}"],
-      synchronize:true
+      type: 'sqlite',
+      database: 'db',
+      entities: ['dist/**/*.entity{.js,.ts}'],
+      synchronize: true,
     }),
-    TypeOrmModule.forFeature([DomainEntity])
+    TypeOrmModule.forFeature([DomainEntity]),
   ],
   controllers: [AppController],
   providers: [AppService],
